@@ -1,9 +1,11 @@
 ---
 layout: post
-title: "Using Octokit.net to authenticate your app with GitHub"
-date: 2014-04-24 10:44 -0800
+title: Using Octokit.net to authenticate your app with GitHub
+date: "2014-04-24 10:44 -0800"
 comments: true
-categories: [octokit github aspnetmvc oauth]
+categories: 
+  - octokit github aspnetmvc oauth
+published: true
 ---
 
 Some endpoints in the GitHub API require authorization to access private details. For example, if you want to get all of a user's repositories, you'll need to authenticate to see private repositories.
@@ -21,7 +23,7 @@ The basic worfklow of an OAuth flow is as follows.
 1. On an unauthenticated request to your site, your site redirects the user to the GitHub oauth login URL (hosted on github.com) with some information in the query string such as your application's identity and the list of scopes (permissions) your application requests.
 2. The GitHub Oauth login page then prompts the user to either accept or reject this authentication request. If the user is not already logged into GitHub.com, they'll login first. ![](https://cloud.githubusercontent.com/assets/19977/2759594/06319936-c9a4-11e3-8792-bdfd0a0565c2.png)
 3. If the user clicks "Authorize application", then this page redirects back to your site with a special session code.
-4. Your site will then make a server to server request and exchange that session code and your application's client secret for an OAuth Access Token. You can then use that token with Octokit.net to make other API requests.
+4. Your site will then make a server to server request and exchange that session code and your application's client secret for an OAuth Access Token. You can then use that token with Octokit.net to make other API requests. Herp Derp.
 
 ## Register your application
 
